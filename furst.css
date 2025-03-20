@@ -120,7 +120,7 @@
     height: 300px;
     max-width: 900px;
     max-height: 770px;
-    min-width: 450px;
+    min-width: 40s0px;
     min-height: 420px;
     border-radius: 20px;
     margin-left: 30px;
@@ -148,12 +148,13 @@ align-items: center;
 
 
 .us{
-max-height: 550px;
+max-height: 450px;
+min-height: 100px;
 background-color: #b0f5c4;
 border-radius: 30px;
-width: 100%;
+width: 97%;
 margin-left: 10px;
-margin-top: 200px;
+margin-top: 20px;
 margin-bottom: 80px;
 padding-bottom: 40px;
 }
@@ -173,13 +174,14 @@ display:inline;
 .bottom{
     margin-top: 30px;
     margin-left: -20px;
-    width: 101%;
+    width: 102%;
     height: 400px;
     background-color: #fcb968 ;
     color: white;
     font-weight: bold;
     display: grid;
     justify-items: center;
+    margin-bottom: 0px;
 }
 .danni{
     justify-items: center;
