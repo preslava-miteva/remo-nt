@@ -1,0 +1,53 @@
+.options{
+display: grid;
+grid-template-rows: 30px 30px 30px 40px ;
+background-color: #b0f5c4;
+width: 95%;
+height:450px ;
+margin-left: 10px;
+margin-top: 20px;
+padding-top: 20px;
+padding-left: 20px;
+padding-bottom: 10px;
+min-width: 400px;
+
+
+}
+.middle-sections {
+    width: 140px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 20px 50px 20px;
+    align-items: center;
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+  .search-bars {
+    flex: 1;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    width: 350px;
+    justify-content: center;
+  }
+  input[type=time]::-webkit-datetime-edit-ampm-field {
+    display: none;
+  }
+  .BUTTON{
+    background-color: #55d890;
+    border: none;
+    width: 140px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    height: 50px;
+    margin-top: 0px;
+  }
+  .BUTTON:hover{
+    background-color: black;
+    color: white;
+  }
+  .vsichko{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
