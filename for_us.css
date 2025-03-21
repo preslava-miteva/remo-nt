@@ -39,7 +39,7 @@
 .what{
 display: block; 
 margin-bottom: 0px;
-font-family: fantasy;
+font-family: 'Delius Swash Caps';
 font-size: 60px;
 margin-bottom: 0px;
 padding-bottom: 0px ;   
@@ -47,7 +47,7 @@ padding-bottom: 0px ;
 .nn{
     background-color: black;
     color: rgb(255, 255, 255);
-    font-family: fantasy;
+    font-family: 'Delius Swash Caps';
     font-size: 80px;
     height: 92%;
     justify-items: center;
