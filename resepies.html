@@ -12,15 +12,15 @@
     <div class="up">
         <img href="" class="img_up">
         <div class="middle-section">
-        <input class="search-bar" type="text" placeholder="Search">
+        <input id="search-bar" class="search-bar" type="text" placeholder="Search">
         <button class="search-button">
           <img class="search-icon" src="images/search.svg">
           <div class="tooltip">Search</div>
         </button></div>
         <div class="up_text">
-            <button class="upper"> Info</button>
-            <button class="upperr"> Recipes</button>
-            <button class="upper">For us</button>
+            <a href="first_page.html" class="upper"> Info</a>
+            <a class="upper"  href="resepies.html"> Recipes</a>
+            <a class="upper" href="for_us.html">For us</a>
         </div>
     </div>
     <div class="recheptat"> 
@@ -84,7 +84,7 @@
         <p>Sofia Tech Park<br></p>
         <p>20.03 - 21.03.2025</p>
         <p>Backend: Preslava Miteva
-        Nikol Kastarova </p>
+        Nicole Katsarova </p>
         <p> Frontend: Melani Balcheva Yana Ninova</p>
         </div>
         <div style="cursor: pointer;">
@@ -92,5 +92,34 @@
             <i class="fa-brands fa-facebook fa-2xl" style="margin-right: 10px;"></i>
           <i class="fa-brands fa-discord fa-2xl"></i></div>
     </footer>
+    <script>
+    document.getElementById("search-bar").addEventListener("input", function() {
+        let searchQuery = this.value.toLowerCase();
+        let recipes = document.querySelectorAll(".recipe-card");
+
+        recipes.forEach(recipe => {
+            let titleElement = recipe.querySelector("h2");
+            let titleText = titleElement.textContent; // Get original text
+            let lowerTitle = titleText.toLowerCase(); // Lowercase version for matching
+            
+            if (searchQuery === "") {
+                // If search is empty, reset the title
+                titleElement.innerHTML = titleText;
+                recipe.style.display = "block";
+            } else if (lowerTitle.includes(searchQuery)) {
+                recipe.style.display = "block";
+
+                // HIGHLIGHTS (so fancy fr)
+                let regex = new RegExp(`(${searchQuery})`, "gi");
+                let highlightedText = titleText.replace(regex, `<span style="background-color: #e3e3e3; font-weight: bold;">$1</span>`);
+                
+                titleElement.innerHTML = highlightedText;
+            } else {
+                recipe.style.display = "none";
+            }
+        });
+    });
+
+        </script>        
 </body>
 </html>
