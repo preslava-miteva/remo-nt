@@ -296,14 +296,6 @@ display:inline;
 }
 
 
-header {
-  background-color: #3cbbb1;
-  padding: 20px;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-}
-
 .favorites-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
