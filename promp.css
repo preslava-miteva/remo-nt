@@ -121,3 +121,23 @@ min-width: 400px;
       #proc{
         margin-top: 40px;
       }
+.upper_buttons{
+  text-align: center;
+  font-weight: bold;
+  color:#2e2f2f;
+  margin-top: 25px;
+  font-size: 25px;
+  text-decoration: none;
+  border: none;
+  width: 140px;
+  padding: 20px;
+  background-color: #f2e0be;
+  border-radius: 3px;
+  transition: background-color 0.15s;
+}
+.upper_buttons:hover{
+  background-color: #f0e9dc;
+}
+.upper_buttons:active{
+  background-color: #f3e6cd;
+}
