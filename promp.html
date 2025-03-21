@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="furst.css">
+    <link rel="stylesheet" href="promp.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="up">
+        <img href="" class="img_up">
+        <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="search.svg">
+          <div class="tooltip">Search</div>
+        </button></div>
+        <div class="up_text">
+            <button href="furstpage.html" class="upper"> Info</button>
+            <button class="upperr"  href="second_page_info.html"> Recipes</button>
+            <button class="upper" href="sign.html">For us</button>
+        </div>
+    </div>    
+  <div class="vsichko">  
+    <div class="options">
+        <label for="number" style="font-size:20px ;
+        font-weight: bold;
+        height: 70px;
+        width: 200px;
+        font-family:monospace;
+        margin-bottom: 0px;
+        margin-top: 0px;" >Portions</label>
+        <input type="number" id="num" min="1" style="height: 40px; width:290px; "><br>
+        <div class="middle-sections"> 
+            <p style="font-size:20px ;
+            font-weight: bold;
+            font-family:monospace;
+            padding-bottom: 20px;
+            margin-top: 40px;" >Allergies
+            </p>
+            <input type="text" class="search-bars" value = "none" id="alg"/>
+        </div>
+        <br>
+        <div class="middle-sections"> 
+            <p style="font-size:20px ;
+            font-weight: bold;
+            font-family:monospace;
+            margin-bottom: 30px;
+            margin-top: 60px;" >Requirements
+            </p>
+            <input type="text" class="search-bars" id="req">
+        </div>
+       <div> 
+        <label for="payment" style="font-size:20px ;
+            font-weight: bold;
+            font-family:monospace;
+            padding-top: -30px;">Cooking Time
+        </label>
+        <br>
+        <div style="height: 40px;">
+            <p style="display: inline-block; margin-right: 110px; ">Hours</p>
+            <p style="display: inline-block;">Min</p>
+        </div>
+        <div>
+            <input type="number" id="hours" min="0" max="24" value="0" style=" height: 35px; width: 120px; margin-right: 20px;">
+            <input type="number" id="minutes" min="0" max="59" value="30" style="height: 35px; width: 120px;">
+        </div>
+
+       </div>
+
+<button class="BUTTON" id="btn">=></button>
+    </div>
+    <div style="width: 96%;
+    height: 480px;
+    margin-top: 20px;
+   "><img src="dinner.jpg" style="width: 880px; height: 600px; margin-left: 150px; margin-top: 20px;">
+    </div>
+</div>
+<div style="display: grid;
+grid-template-columns: 1fr 1fr;">
+<div>.</div>
+<div class="coments bubble" id="AI"></div>
+</div>
+<div style="display: grid;
+grid-template-columns: 1px 2px;">
+<div class="comment bubbles" id="GM"></div>
+<div style="display: grid;
+grid-template-rows: 1fr 1fr;
+margin-left: 800px;">
+<p class="place">Places where you can find the ingridients</p>
+<img src="arrow.png" class="image">
+</div>
+</div>
+    <div class="bottom">
+        <div class="no">
+        <p class="n">\n</p>
+        <p style="background-color: rgb(6, 43, 12);"></p>
+        </div>
+        <div class="danni" >
+        <p>Sofia Tech Park<br></p>
+        <p>20.03 - 21.03.2025</p>
+        <p>Backend: Preslava Miteva
+        Nikol Kastarova </p>
+        <p> Frontend: Melani Balcheva Yana Ninova</p>
+        </div>
+        <div style="cursor: pointer;">
+            <i class="fa-brands fa-instagram fa-rotate-270 fa-2xl" style="margin-bottom: 60px; margin-right: 10px;"></i>
+            <i class="fa-brands fa-facebook fa-2xl" style="margin-right: 10px;"></i>
+          <i class="fa-brands fa-discord fa-2xl"></i></div>
+        </div>
+</body>
+<script src="promp1.js"></script>
+</html>
