@@ -1,8 +1,4 @@
-@import url('https://fonts.google.com/specimen/Delius+Swash+Caps?preview.text=Hello%20there%20this%20is%20The%20Zone%20I%20dont%20Know%20what%20Im%20doing%20G&preview.size=8&lang=en_Latn&categoryFilters=Feeling:%2FExpressive%2FCute');
 
-.body {
-    font-family: 'Delius Swash Caps'
-    }
 .up{
     width: 100%;
     height: 100px;
@@ -22,17 +18,27 @@
   .upper{
     font-weight: bold;
     color: white;
-    margin-top: 30px;
+    margin-top: 25px;
     font-size: 25px;
+    width: 100px;
+    background-color: #f1a64a;
    text-decoration: none;
+   border-radius: 3px;
+   border: none;
+   margin-right: 10px;
+   margin-left: 10px;
   }
   .upperr{
     font-weight: bold;
     color: white;
-    margin-top: 30px;
+    margin-top: 25px;
     font-size: 25px;
    text-decoration: none;
-   padding-right: 20px;
+   border: none;
+  width: 120px;
+
+   background-color: #f1a64a;
+   border-radius: 3px;
   }
 .img-up{
   min-width: 270px;
@@ -120,7 +126,7 @@
     height: 300px;
     max-width: 900px;
     max-height: 770px;
-    min-width: 40s0px;
+    min-width: 40px;
     min-height: 420px;
     border-radius: 20px;
     margin-left: 30px;
@@ -140,7 +146,7 @@
     background-color: #b0f5c4;
 font-weight: bold;
 margin-top: 20px;
-align-items: center;
+justify-items: center;
     padding-top: 30px;
     margin-left: 40px;
 }
@@ -175,7 +181,7 @@ display:inline;
     margin-top: 30px;
     margin-left: -20px;
     width: 102%;
-    height: 400px;
+    height: 350px;
     background-color: #fcb968 ;
     color: white;
     font-weight: bold;
