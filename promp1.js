@@ -55,7 +55,7 @@ let rec = {
 
 const time = getTimeInMinutes();
 
-const MODEL_NAME = "mistralai/mistral-small-3.1-24b-instruct:free";
+const MODEL_NAME = "mistralai/mistral-small-3.1-24b-instruct";
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";   
 
 
@@ -76,7 +76,7 @@ async function generate_inference() {
         const response = await fetch(API_URL, {
             method: "POST",
             headers: { 
-                "Authorization": `Bearer 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`,
+                "Authorization": `Bearer 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`,
                 "HTTP-Referer": "http://localhost:3000",
                 "Content-Type": "application/json"
             },
