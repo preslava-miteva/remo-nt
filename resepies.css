@@ -3,7 +3,7 @@
     margin-left: -20px;
     width: 200px;
     height: 50px;
-    background-color: #fcb968;
+    background-color: #ee4266;
     color: white;
     font-weight: bold;
     display: grid;
@@ -16,7 +16,7 @@
 }
 
 .more-button:hover {
-    background-color: #e69a3a; 
+    background-color: #f06986; 
 }
 
 .if{
