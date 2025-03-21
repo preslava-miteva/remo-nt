@@ -76,7 +76,7 @@ padding-bottom: 0px ;
     margin-left: -20px;
     width: 102%;
     height: 350px;
-    background-color: #2e2f2f ;
+    background-color: #2e2f2f;
     color: white;
     font-weight: bold;
     display: grid;
@@ -92,7 +92,7 @@ padding-bottom: 0px ;
     text-decoration: none;
     border: none;
     width: 140px;
-    padding: 20px;
+    padding: 10px;
     background-color: #f2e0be;
     border-radius: 3px;
     transition: background-color 0.15s;
@@ -103,3 +103,4 @@ padding-bottom: 0px ;
   .upper_buttons:active{
     background-color: #f3e6cd;
   }
+

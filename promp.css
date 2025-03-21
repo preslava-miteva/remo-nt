@@ -82,11 +82,11 @@ min-width: 400px;
     height: 0;
     border-top: 20px solid transparent; 
     border-bottom: 20px solid transparent;
-    background-color: #3cbbb1;
-    border-left: 40px solid (255, 0, 0);
+    border-left: 40px solid #3cbbb1;
     right: -40px; 
     top: 70%;
     transform: translateY(-50%); }
+    
     .bubbles{
       position: relative;
     background-color: #3cbbb1;
