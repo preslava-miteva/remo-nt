@@ -54,7 +54,7 @@ try {
     const response = await fetch(API_URL, {
         method: "POST",
         headers: { 
-            "Authorization": `Bearer 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`,
+            "Authorization": `Bearer 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`,
             "HTTP-Referer": "http://localhost:3000",
             "Content-Type": "application/json"
         },
