@@ -20,11 +20,13 @@
     color: white;
     margin-top: 25px;
     font-size: 25px;
-    width: 100px;
+    width: 80px;
     background-color: #f1a64a;
    text-decoration: none;
    border-radius: 3px;
    border: none;
+   padding-top: 10px;
+   padding-left: 20px;
    margin-right: 10px;
    margin-left: 10px;
   }
@@ -35,8 +37,9 @@
     font-size: 25px;
    text-decoration: none;
    border: none;
-  width: 120px;
-
+  width: 100px;
+  padding-top: 10px;
+  padding-left: 20px;
    background-color: #f1a64a;
    border-radius: 3px;
   }
