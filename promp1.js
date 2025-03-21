@@ -79,7 +79,7 @@ async function generate_inference() {
         const response = await fetch(API_URL, {
             method: "POST",
             headers: { 
-                "Authorization": `Bearer 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`,
+                "Authorization": `Bearer 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`,
                 "HTTP-Referer": "http://localhost:3000",
                 "Content-Type": "application/json"
             },
