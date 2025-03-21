@@ -1,74 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kQGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="resepies.css">
     <link rel="stylesheet" href="furst.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #popup {
+        position: fixed; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        background: white;
+        padding: 20px;
+        width: 50%; 
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: none;
+    }
+
+    #popup img {
+    width: 330px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+    #popup h2 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    #popup p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    #popup-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+    }
+
+    #popup-close:hover {
+        color: red;
+    }
+
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 999; /* Below the popup but above everything else */
+        display: none;
+    }
+    </style>
+    
 </head>
 <body>
     <div class="up">
         <img href="" class="img_up">
         <div class="middle-section">
-        <input id="search-bar" class="search-bar" type="text" placeholder="Search">
-        <button class="search-button">
-          <img class="search-icon" src="images/search.svg">
-          <div class="tooltip">Search</div>
-        </button></div>
+            <input id="search-bar" class="search-bar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img class="search-icon" src="images/search.svg">
+                <div class="tooltip">Search</div>
+            </button>
+        </div>
         <div class="up_text">
-
             <a href="first_page.html" class="upper_buttons"> Info</a>
             <a class="upper_buttons"  href="resepies.html"> Recipes</a>
             <a class="upper_buttons"  href="like.html"> Favorites</a>
             <a class="upper_buttons" href="for_us.html">For us</a>
-   </div>
+        </div>
     </div>
+
     <div class="recheptat"> 
-        <div class="recipe-card">
+        <div class="recipe-card" onclick="openPopup(0)">
             <img src="images/palachinki.jpg" alt="Рецепта">
             <div class="content">
-                <h2>Spelt Buns with Pancake and Sweet-Savory Delight</h2>
+                <h2>Emmer Bread Rolls with Pancake and Sweet-Savory Delight</h2>
                 <p>A delicious and easy-to-make combination of spelt buns, pancake, and a sweet-savory touch!</p>
             </div>
         </div>
-        <div class="recipe-card">
+        <div class="recipe-card" onclick="openPopup(1)">
             <img src="images/supa.jpg" alt="Рецепта">
             <div class="content">
-                <h2>Vegetable Soup with Quinoa and Mozzarella</h2>
-            <p>A hearty and nutritious vegetable soup with quinoa and melted mozzarella for a perfect comfort dish!</p>
+                <h2>Vegetable Soup with Chickpeas</h2>
+                <p>A hearty and nutritious vegetable soup with chickpeas, quinoa, and melted mozzarella.</p>
             </div>
         </div>
-<div class="recipe-card">
-    <img src="images/salata.jpg" alt="Рецепта">
-    <div class="content">
-        <h2>Quinoa and Mozzarella Salad</h2>
-<p>A refreshing salad made with quinoa, fresh vegetables, and creamy mozzarella, dressed with a light vinaigrette.</p>
-
+        <div class="recipe-card" onclick="openPopup(2)">
+            <img src="images/salata.jpg" alt="Рецепта">
+            <div class="content">
+                <h2>Fresh Quinoa Salad with Mozzarella</h2>
+                <p>A refreshing salad made with quinoa, fresh vegetables, and creamy mozzarella.</p>
+            </div>
         </div>
-</div>
     </div>
+
     <div class="recheptat">
-        <div class="recipe-card">
+        <div class="recipe-card" onclick="openPopup(3)">
             <img src="images/dessert.jpg" alt="Рецепта">
             <div class="content">
                 <h2>Fruit Tartlets</h2>
                 <p>Delicious and colorful fruit tartlets with a buttery crust and fresh seasonal fruits.</p>
-            
             </div>
-        </div><div class="recipe-card">
+        </div>
+        <div class="recipe-card" onclick="openPopup(4)">
             <img src="images/oriz.png" alt="Рецепта">
             <div class="content">
-                <h2> Kebab with Rice</h2>
-            <p>A flavorful and hearty dish featuring tender meat in a rich wine sauce, served with rice.</p>
+                <h2>Wine Kebab with Rice</h2>
+                <p>A flavorful dish featuring tender meat in a rich wine sauce, served with rice.</p>
+            </div>
         </div>
-        </div><div class="recipe-card">
+        <div class="recipe-card" onclick="openPopup(5)">
             <img src="images/keks.webp" alt="Рецепта">
             <div class="content">
                 <h2>Cake with Banana Cream</h2>
-            <p>A soft and fluffy cake topped with a rich and creamy banana-flavored filling.</p>
-        </div>
+                <p>A soft and fluffy cake topped with a rich and creamy banana-flavored filling.</p>
+            </div>
         </div>
     </div>
 
@@ -77,51 +141,165 @@
         <p class="if">If you want to find more recipes use our:</p>
         <a href="promp.html" class="more-button">AI BOT</a>
     </div>
+
     <footer class="bottom">
         <div class="no">
-        <p class="n">\n</p>
-        <p style="background-color: rgb(6, 43, 12);"></p>
+            <p class="n">\n</p>
+            <p style="background-color: rgb(6, 43, 12);"></p>
         </div>
-        <div class="danni" >
-        <p>Sofia Tech Park<br></p>
-        <p>20.03 - 21.03.2025</p>
-        <p>Backend: Preslava Miteva
-        Nicole Katsarova </p>
-        <p> Frontend: Melani Balcheva Yana Ninova</p>
+        <div class="danni">
+            <p>Sofia Tech Park<br></p>
+            <p>20.03 - 21.03.2025</p>
+            <p>Backend: Preslava Miteva, Nicole Katsarova </p>
+            <p>Frontend: Melani Balcheva, Yana Ninova</p>
         </div>
         <div style="cursor: pointer;">
             <i class="fa-brands fa-instagram fa-rotate-270 fa-2xl" style="margin-bottom: 60px; margin-right: 10px;"></i>
             <i class="fa-brands fa-facebook fa-2xl" style="margin-right: 10px;"></i>
-          <i class="fa-brands fa-discord fa-2xl"></i></div>
+            <i class="fa-brands fa-discord fa-2xl"></i>
+        </div>
     </footer>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <img id="popup-image" src="" alt="Recipe Image">
+            <p id="popup-description"></p>
+            <p id="popup-ingredients"></p>
+            <p id="popup-preparation"></p>
+        </div>
+    </div>
+
     <script>
-    document.getElementById("search-bar").addEventListener("input", function() {
-        let searchQuery = this.value.toLowerCase();
-        let recipes = document.querySelectorAll(".recipe-card");
-
-        recipes.forEach(recipe => {
-            let titleElement = recipe.querySelector("h2");
-            let titleText = titleElement.textContent; // Get original text
-            let lowerTitle = titleText.toLowerCase(); // Lowercase version for matching
-            
-            if (searchQuery === "") {
-                // If search is empty, reset the title
-                titleElement.innerHTML = titleText;
-                recipe.style.display = "block";
-            } else if (lowerTitle.includes(searchQuery)) {
-                recipe.style.display = "block";
-
-                // HIGHLIGHTS (so fancy fr)
-                let regex = new RegExp(`(${searchQuery})`, "gi");
-                let highlightedText = titleText.replace(regex, `<span style="background-color: #e3e3e3; font-weight: bold;">$1</span>`);
-                
-                titleElement.innerHTML = highlightedText;
-            } else {
-                recipe.style.display = "none";
+        const recipes = [
+            {
+                title: "Emmer Bread Rolls with Pancake and Sweet-Savory Delight",
+                image: "images/palachinki.jpg",
+                description: "A delicious and easy-to-make combination of spelt buns, pancake, and a sweet-savory touch!",
+                ingredients: "• 28 g yogurt + a pinch of baking soda + 28 g emmer flour (2 CHO blocks)\n" +
+                             "• 35 g turkey ham (1 PRO block)\n" +
+                             "• 1 boiled egg (1 PRO block)\n" +
+                             "• 20 g avocado + 1 tsp pesto (3 FAT blocks)\n" +
+                             "• A slice of tomato\n" +
+                             "• 1 egg (1 PRO block) for the pancake\n" +
+                             "• 10 g oat bran (0.5 CHO block) + a little fresh milk\n" +
+                             "• 6 g honey (0.5 CHO block)\n" +
+                             "• 6 g tahini + cocoa (2 FAT blocks)\n" +
+                             "• Raspberries for decoration",
+                preparation: "Mix the emmer flour with yogurt and baking soda. Cook two rolls in a non-stick pan, flipping both sides.\n" +
+                             "For the pancake, beat the egg with oat bran and fresh milk. Cook on level 6, stirring continuously. Spread with honey, tahini, and cocoa. Decorate with raspberries."
+            },
+            {
+                title: "Vegetable Soup with Chickpeas",
+                image: "images/supa.jpg",
+                description: "A hearty and nutritious vegetable soup with chickpeas, quinoa, and melted mozzarella.",
+                ingredients: "• 100 g leek (1 CHO block)\n" +
+                             "• 65 g carrot (0.5 CHO block)\n" +
+                             "• 180 g mushrooms (0.5 CHO block)\n" +
+                             "• 230 g broccoli (1 CHO block)\n" +
+                             "• 270 g cauliflower (1 CHO block)\n" +
+                             "• 80 g chickpeas (2 CHO blocks)\n" +
+                             "• 2 tsp olive oil (6 FAT blocks)\n" +
+                             "• Salt, black pepper, summer savory, turmeric, dill",
+                preparation: "Sauté the finely chopped carrot and leek in a bit of water. Add mushrooms, then pour in water.\n" +
+                             "Once boiling, add remaining vegetables and season. Cook until tender. Sprinkle with finely chopped dill before serving."
+            },
+            {
+                title: "Fresh Quinoa Salad with Mozzarella",
+                image: "images/salata.jpg",
+                description: "A refreshing salad made with quinoa, fresh vegetables, and creamy mozzarella.",
+                ingredients: "• 105 g light mozzarella (3 PRO blocks)\n" +
+                             "• 1/2 bunch parsley\n" +
+                             "• 30 g quinoa (2 CHO blocks, measured raw)\n" +
+                             "• 250 g tomatoes (0.75 CHO block)\n" +
+                             "• 34 g soft avocado (2 FAT blocks)\n" +
+                             "• Juice of 1/2 lemon (0.25 CHO block)\n" +
+                             "• 1/3 tsp olive oil (1 FAT block)\n" +
+                             "• Salt",
+                preparation: "Cook the quinoa in water for 10-15 minutes, let cool. Finely chop the parsley, tomato, and avocado.\n" +
+                             "Chop mozzarella and mix everything well. Season with lemon juice, salt, and olive oil."
+            },
+            {
+                title: "Fruit Tartlets",
+                image: "images/dessert.jpg",
+                description: "Delicious and colorful fruit tartlets with a buttery crust and fresh seasonal fruits.",
+                ingredients: "• 200 g apples (2 CHO blocks)\n" +
+                             "• 76 g oat bran (4 CHO blocks)\n" +
+                             "• 3 small apricots (1 CHO block)\n" +
+                             "• 65 g raspberries + 40 g blueberries (1 CHO block)\n" +
+                             "• 2 egg whites (1 PRO block)\n" +
+                             "• 18 g chocolate protein powder (2 PRO blocks)\n" +
+                             "• 195 g skyr (3 PRO blocks)\n" +
+                             "• 112 g low-fat cottage cheese (2 PRO blocks)\n" +
+                             "• 24 g hazelnut tahini (8 FAT blocks)\n" +
+                             "• 8 walnuts (8 FAT blocks)\n" +
+                             "• Vanilla, baking powder, erythritol, cinnamon",
+                preparation: "Beat egg whites with oat bran, apples, cinnamon, protein powder, tahini, walnuts, vanilla, baking powder, and erythritol.\n" +
+                             "Distribute into 4 tartlet molds and bake at 180°C for 20 min, then 10 more min with fan.\n" +
+                             "Cool and top with skyr, cottage cheese, vanilla, and erythritol. Decorate with fruits and mint."
+            },
+            {
+                title: "Wine Kebab with Rice",
+                image: "images/oriz.png",
+                description: "A flavorful dish featuring tender meat in a rich wine sauce, served with rice.",
+                ingredients: "• 315 g pork\n" +
+                             "• 2 medium onions (200 g total)\n" +
+                             "• 2 tbsp starch\n" +
+                             "• 3 tsp oil or olive oil\n" +
+                             "• 1-2 bay leaves\n" +
+                             "• Salt, black pepper, paprika, savory\n" +
+                             "• 3-4 tbsp wine",
+                preparation: "Sauté finely chopped onion in a pot with a little water and oil. Add pork chunks and cook until browned.\n" +
+                             "Add spices and wine (except savory) with 1.5 cups of water. Pressure cook 10 min or simmer until tender.\n" +
+                             "Mix starch with water and add to thicken. Add savory and simmer until thickened."
+            },
+            {
+                title: "Cake with Banana Cream",
+                image: "images/keks.webp",
+                description: "A soft and fluffy cake topped with a rich and creamy banana-flavored filling.",
+                ingredients: "• 2 ripe bananas\n" +
+                             "• 200 g flour\n" +
+                             "• 100 g sugar\n" +
+                             "• 1/2 cup milk\n" +
+                             "• 2 eggs\n" +
+                             "• 1 tsp baking powder\n" +
+                             "• 1/2 tsp vanilla extract\n" +
+                             "• 100 g butter\n" +
+                             "• 100 g whipped cream",
+                preparation: "Mash bananas and mix with eggs, sugar, milk, and vanilla. Fold in flour and baking powder.\n" +
+                             "Pour into a greased cake pan and bake at 180°C for 25-30 min.\n" +
+                             "Cool, then spread with whipped cream and garnish with banana slices."
             }
-        });
-    });
+        ];
+    
+        function openPopup(index) {
+            document.getElementById("popup-title").textContent = recipes[index].title;
+            document.getElementById("popup-image").src = recipes[index].image;
+            document.getElementById("popup-description").textContent = recipes[index].description;
+            document.getElementById("popup-ingredients").textContent = "Ingredients: " + recipes[index].ingredients;
+            document.getElementById("popup-preparation").textContent = "Preparation: " + recipes[index].preparation;
 
-        </script>        
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("popup-overlay").style.display = "block"; // Show overlay
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popup-overlay").style.display = "none"; // Hide overlay
+        }
+
+    </script>
+    <div class="popup-overlay" id="popup-overlay" onclick="closePopup()"></div>
+    <div id="popup">
+        <button id="popup-close" onclick="closePopup()">✖</button>
+        <h2 id="popup-title"></h2>
+        <img id="popup-image" src="" alt="Recipe Image">
+        <p id="popup-description"></p>
+        <p id="popup-ingredients"></p>
+        <p id="popup-preparation"></p>
+    </div>
+    
 </body>
 </html>
