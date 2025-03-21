@@ -54,14 +54,13 @@ let rec = {
     
 
 const time = getTimeInMinutes();
-// Function to make inference request to OpenRouter API
+
 const MODEL_NAME = "mistralai/mistral-small-3.1-24b-instruct:free";
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";   
 
 
 const specifiedElement = document.getElementById('btn')
 
-// I'm using "click" but it works with any event
 document.getElementById("btn").addEventListener('click', async event => {
   console.log("button clicked");
   const recipe = await generate_inference();
@@ -71,15 +70,13 @@ document.getElementById("btn").addEventListener('click', async event => {
   document.getElementById("proc").textContent = recipeOBJ.process;
 
 })
-
-// Function to make inference request to OpenRouter API
 async function generate_inference() {
     try {
         const PROMPT = "You are a helpful diet asssitant. You will generate a zone diet recipe with the zone block ratio on the following requirements: the amounth of portions: " + portions + ", the requirements given by the user: " + request + ", the maximum time to make is " + time + "and avoid the ingredients specified " + allergies + ". Return your answer in json format with fields: name, ingredients and process. Return the list of ingredient as an array of strings where every ingredient is a list item. Make sure you only return the json" 
         const response = await fetch(API_URL, {
             method: "POST",
             headers: { 
-                "Authorization": `Bearer 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`,
+                "Authorization": `Bearer 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`,
                 "HTTP-Referer": "http://localhost:3000",
                 "Content-Type": "application/json"
             },
@@ -101,11 +98,7 @@ async function generate_inference() {
     const data = await response.json(); 
     console.log(data);
 
-    // const recipe = data.choices[0].message.content.split("json")[1] ?? 'Name: Shake and Bake Zucchini Fries \n     \n3 Baggies    \n1/2 lb Zucchini (cut into 3-4 inch sticks)    \n1 1/2 tbsps Almond meal (divided)    \n1 1/2 tbsps Flour (divided)    \n1 tbsps Parmesan (finely grated)    \nTo Taste Salt and pepper    \n3 tbsps Egg beaters-whites    \n1 tbsps 1% milk    \nCooking spray (Pam olive oil)    \n1/3 cup Tomato sauce (warmed)'
-
-    // document.getElementById("suggested-time").textContent = recipe.substring(recipe.indexOf("{"), recipe.lastIndexOf("}") + 1);
     const res =  data.choices[0].message.content;
-   // generateHTML(JSON.parse(res));
     rec = res.substring(res.indexOf("{"), res.lastIndexOf("}") + 1);
     return rec;
 } catch (error) {
