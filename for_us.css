@@ -4,7 +4,7 @@
     max-height: 400px;
     display: grid;
     grid-template-columns: 2fr 2fr;
-    margin-top: 80px;
+    margin-top: 180px;
     margin-left: 20px;
     justify-items: center;
     margin-bottom: 180px;
@@ -14,33 +14,38 @@
     min-height: 400px;
     max-height: 500px;
     object-fit:contain;
-    margin-top: -30px;
+    margin-top: 0px;
     margin-left: 40px;
 }
 .ggg{
-    background-color: rgba(212, 212, 206, 0.9);
+    background-color: rgb(182, 24, 182);
     margin-left: -160px;
     margin-top: 60px;
     margin-right: 0px;
     padding-left: 20px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    font-size: 15px;
+    padding-right: 30px;
+    padding-top: 40px;
+    min-height: 450px;
+    max-height: 600px;
+    font-size: 20px;
     font-weight: bold; 
 }
 .what{
 display: block; 
-margin-bottom: -10px;
+margin-bottom: 0px;
 font-family: fantasy;
-font-size: 40px;   
+font-size: 60px;
+margin-bottom: 0px;
+padding-bottom: 0px ;   
 }
 .nn{
     background-color: black;
     color: rgb(255, 255, 255);
     font-family: fantasy;
     font-size: 80px;
-    height: 100%;
+    height: 92%;
     justify-items: center;
+    margin-top: 40px;
 }
 .nnn{
     justify-items: center;
@@ -58,5 +63,17 @@ font-size: 40px;
     background-color: rgba(158, 157, 157, 0.9);
     font-size: 40px; 
     padding-left: 20px;
-    height: 100%;  
+    height: 100%; 
+    }
+    .bottomm{
+    margin-top: 300px;
+    margin-left: -20px;
+    width: 102%;
+    height: 350px;
+    background-color: #fcb968 ;
+    color: white;
+    font-weight: bold;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 0px;
     }
