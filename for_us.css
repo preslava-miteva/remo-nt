@@ -65,7 +65,9 @@ padding-bottom: 0px ;
     font-weight: bold; 
 }
 .whaT{
-    font-family: fantasy;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
     background-color: rgba(158, 157, 157, 0.9);
     font-size: 40px; 
     padding-left: 20px;
