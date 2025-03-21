@@ -202,7 +202,7 @@ display:inline;
 .bottom{
     margin-top: 30px;
     margin-left: -20px;
-    width: 102%;
+    width: 100em;
     height: 350px;
     background-color: #2e2f2f ;
     color: white;
