@@ -39,6 +39,27 @@
 .upper_buttons:active{
   background-color: #f3e6cd;
 }
+.upper_buttonss{
+  text-align: center;
+  font-weight: bold;
+  color:#2e2f2f;
+  margin-top: 25px;
+  font-size: 25px;
+  text-decoration: none;
+  border: none;
+  width: 140px;
+  height: 55px;
+  padding-top: 10px;
+  background-color: #f2e0be;
+  border-radius: 3px;
+  transition: background-color 0.15s;
+}
+.upper_buttonss:hover{
+  background-color: #f0e9dc;
+}
+.upper_buttonss:active{
+  background-color: #f3e6cd;
+}
 .img-up{
   min-width: 270px;
 }  
@@ -164,11 +185,12 @@
 }
 .our{
 display:inline;
-    font-family: fantasy;
+font-weight: bold;
     width: 75%;
     font-size: 40px;
     margin-bottom: 30px;
     margin-top: 20px;
+    text-align: center;
 }
 .our_text{
     width: 100%;
@@ -177,6 +199,7 @@ display:inline;
     font-size: 20px;
     margin-right: 10px;
     margin-bottom: 20px;
+    text-align: center;
 }
 .bottom{
     margin-top: 30px;
@@ -219,8 +242,8 @@ display:inline;
  }
 
  * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -301,6 +324,7 @@ display:inline;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+  margin-right: 20px;
   max-width: 1000px;
   margin: auto;
 }
@@ -348,3 +372,6 @@ h2 {
 .remove-btn:hover {
   background-color: #1c867d;
 }
+
+
+
