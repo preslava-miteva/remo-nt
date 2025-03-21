@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+* {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+
 .neshto{
     width: 95%;
     min-height: 300px;

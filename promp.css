@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+* {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+
 .options{
 display: grid;
 grid-template-rows: 30px 30px 30px 40px ;

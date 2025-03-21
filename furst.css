@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+* {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
 
 .up{
     width: 101%;
@@ -133,7 +138,7 @@
     min-width: 480px;
     height: 420px;
     align-items: center;
-    font-family: fantasy;
+    font-family: Delius Swash Caps;
     border-radius: 20px;
     margin-right: 20px;
     border-color: #d7b89a;
