@@ -81,11 +81,20 @@
 <div style="display: grid;
 grid-template-columns: 1fr 1fr;">
 <div>.</div>
-<div class="coments bubble" id="AI"></div>
+<div class="comments bubble" id="AI">
+    <span onclick="like()">
+        <i class="fa-heart fa-solid"></i>
+    </span>
+    <h3 id="recipeTitle"></h3>
+    <ul id="ing"></ul>
+    <p id="proc"></p>
+</div>
 </div>
 <div style="display: grid;
 grid-template-columns: 1px 2px;">
-<div class="comment bubbles" id="GM"></div>
+<div class="comment bubbles" id="GM" >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43432.86139148525!2d23.24570264863281!3d42.6999877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85c69b304c5d%3A0x727c415c1bd2f7ac!2sKaufland%20Sofia-Center!5e1!3m2!1sen!2sbg!4v1742574259433!5m2!1sen!2sbg" width="100%" height="100%" style="border:0; border-radius: 5%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 <div style="display: grid;
 grid-template-rows: 1fr 1fr;
 margin-left: 800px;">
@@ -110,6 +119,7 @@ margin-left: 800px;">
             <i class="fa-brands fa-facebook fa-2xl" style="margin-right: 10px;"></i>
           <i class="fa-brands fa-discord fa-2xl"></i></div>
         </div>
+    
 </body>
 <script src="promp1.js"></script>
 </html>
