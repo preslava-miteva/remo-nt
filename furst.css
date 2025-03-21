@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+* {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
 
 .up{
     width: 101%;
@@ -15,58 +20,26 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     min-width: 270px;
   }
-.upper{
-    font-weight: bold;
-    color: #2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-    width: 100px;
-    background-color: #f2e0be;
-   text-decoration: none;
-   border-radius: 3px;
-   padding-top: 10px;
-   padding-left: 20px;
-   margin-left: 10px;
-  }
-  .uppe{
-    font-weight: bold;
-    color: #2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-    width: 100px;
-    background-color: #f2e0be;
-   text-decoration: none;
-   border-radius: 3px;
-   padding-top: 10px;
-   padding-left: 25px;
-   margin-left: 10px;
-  }
-.upperr{
-    font-weight: bold;
-    color: #2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-   text-decoration: none;
-   border: none;
-  width: 120px;
-  padding-top: 10px;
-  padding-left: 20px;
-   background-color: #f2e0be;
-   border-radius: 3px;
-  }
-  .upperrr{
-    font-weight: bold;
-    color:#2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-   text-decoration: none;
-   border: none;
+.upper_buttons{
+  text-align: center;
+  font-weight: bold;
+  color:#2e2f2f;
+  margin-top: 25px;
+  font-size: 25px;
+  text-decoration: none;
+  border: none;
   width: 140px;
-  padding-top: 10px;
-  padding-left: 20px;
-   background-color: #f2e0be;
-   border-radius: 3px;
-  }
+  padding: 20px;
+  background-color: #f2e0be;
+  border-radius: 3px;
+  transition: background-color 0.15s;
+}
+.upper_buttons:hover{
+  background-color: #f0e9dc;
+}
+.upper_buttons:active{
+  background-color: #f3e6cd;
+}
 .img-up{
   min-width: 270px;
 }  
@@ -80,6 +53,7 @@
     border-radius: 2px;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
     min-width: 50px;
+    outline:none;
   }
   
 .search-bar::placeholder {
@@ -164,7 +138,7 @@
     min-width: 480px;
     height: 420px;
     align-items: center;
-    font-family: fantasy;
+    font-family: Delius Swash Caps;
     border-radius: 20px;
     margin-right: 20px;
     border-color: #d7b89a;
