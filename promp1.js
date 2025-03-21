@@ -107,14 +107,27 @@ async function generate_inference() {
 }
 }
 
+// Initialize counter from localStorage or start at 0
+let count = localStorage.getItem("counter") ? parseInt(localStorage.getItem("counter")) : 0;
+
 function like(){
-    const old = JSON.parse(localStorage.getItem("liked"))
-   console.log("old", old);
-    if (old){
-        old.push(rec)
-        localStorage.setItem("liked", JSON.stringify( old));
-    }
-    else{
-        localStorage.setItem("liked", JSON.stringify([rec]))
+    count++;
+    localStorage.setItem("counter", count);
+    localStorage.setItem("liked." + count, JSON.stringify([rec]))
+    // const likedRecipe = JSON.parse(localStorage.getItem("liked"))
+//    console.log("likedRecipe", likedRecipe);
+    // if (old){
+    //     old.push(rec)
+    //     localStorage.setItem("liked." + count, JSON.stringify( old));
+    // }
+    // else{
+        // localStorage.setItem("liked", JSON.stringify([rec]))
+    // }
+}
+
+function loadLiked() {
+    const n = localStorage.getItem("counter");
+    for (let i = 1; i <= n; i++) {
+        let loadRecipe = localStorage.getItem("liked." + i);
     }
 }
