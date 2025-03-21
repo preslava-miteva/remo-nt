@@ -2,7 +2,7 @@
 .up{
     width: 101%;
     height: 100px;
-    background-color:#fcb968 ;
+    background-color: #2e2f2f ;
     margin-top: -10px;
     margin-left: -10px;
     display: grid;
@@ -17,11 +17,11 @@
   }
 .upper{
     font-weight: bold;
-    color: white;
+    color: #2e2f2f;
     margin-top: 25px;
     font-size: 25px;
     width: 100px;
-    background-color: #f1a64a;
+    background-color: #f2e0be;
    text-decoration: none;
    border-radius: 3px;
    padding-top: 10px;
@@ -30,11 +30,11 @@
   }
   .uppe{
     font-weight: bold;
-    color: white;
+    color: #2e2f2f;
     margin-top: 25px;
     font-size: 25px;
     width: 100px;
-    background-color: #f1a64a;
+    background-color: #f2e0be;
    text-decoration: none;
    border-radius: 3px;
    padding-top: 10px;
@@ -43,7 +43,7 @@
   }
 .upperr{
     font-weight: bold;
-    color: white;
+    color: #2e2f2f;
     margin-top: 25px;
     font-size: 25px;
    text-decoration: none;
@@ -51,12 +51,12 @@
   width: 120px;
   padding-top: 10px;
   padding-left: 20px;
-   background-color: #f1a64a;
+   background-color: #f2e0be;
    border-radius: 3px;
   }
   .upperrr{
     font-weight: bold;
-    color: white;
+    color:#2e2f2f;
     margin-top: 25px;
     font-size: 25px;
    text-decoration: none;
@@ -64,7 +64,7 @@
   width: 140px;
   padding-top: 10px;
   padding-left: 20px;
-   background-color: #f1a64a;
+   background-color: #f2e0be;
    border-radius: 3px;
   }
 .img-up{
@@ -167,8 +167,8 @@
     font-family: fantasy;
     border-radius: 20px;
     margin-right: 20px;
-    border-color: #b0f5c4;
-    background-color: #b0f5c4;
+    border-color: #d7b89a;
+    background-color: #d7b89a;
     font-weight: bold;
     margin-top: 20px;
     justify-items: center;
@@ -181,7 +181,7 @@
 .us{
   max-height: 450px;
   min-height: 100px;
-  background-color: #b0f5c4;
+  background-color: #d7b89a;
   border-radius: 30px;
   width: 97%;
   margin-left: 10px;
@@ -210,7 +210,7 @@ display:inline;
     margin-left: -20px;
     width: 102%;
     height: 350px;
-    background-color: #fcb968 ;
+    background-color: #2e2f2f ;
     color: white;
     font-weight: bold;
     display: grid;
@@ -230,7 +230,7 @@ display:inline;
 }
 .us1{
     max-height: 850px;
-    background-color:#b0f5c4;
+    background-color:#d7b89a;
     border-radius: 30px;
     width: 100%;
     margin-left: 0px;

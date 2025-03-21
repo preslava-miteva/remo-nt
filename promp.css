@@ -1,7 +1,7 @@
 .options{
 display: grid;
 grid-template-rows: 30px 30px 30px 40px ;
-background-color: #b0f5c4;
+background-color: #d7b89a;
 width: 100%;
 height:600px ;
 margin-left: 10px;
@@ -36,7 +36,7 @@ min-width: 400px;
     display: none;
   }
   .BUTTON{
-    background-color: #55d890;
+    background-color: #f2e0be;
     border: none;
     width: 190px;
     border-radius: 8px;
@@ -56,7 +56,7 @@ min-width: 400px;
   }
   .bubble{
     position: relative;
-    background-color: red;
+    background-color: #3cbbb1;
     height: 1000px;
     width: 1200px;
     margin-top: 40px;
@@ -76,13 +76,14 @@ min-width: 400px;
     height: 0;
     border-top: 20px solid transparent; 
     border-bottom: 20px solid transparent;
-    border-left: 40px solid rgb(255, 0, 0);
+    background-color: #3cbbb1;
+    border-left: 40px solid (255, 0, 0);
     right: -40px; 
     top: 70%;
     transform: translateY(-50%); }
     .bubbles{
       position: relative;
-      background-color: red;
+    background-color: #3cbbb1;
       height: 500px;
       width: 700px;
       margin: 40px;
@@ -96,7 +97,7 @@ min-width: 400px;
       height: 0;
       border-top: 20px solid transparent; 
       border-bottom: 20px solid transparent;
-      border-right: 40px solid rgb(255, 0, 0);
+       border-right: 40px solid #3cbbb1;
       left: -40px; 
       top: 70%;
       transform: translateY(-50%); }
