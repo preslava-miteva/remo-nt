@@ -4,6 +4,11 @@
  const portions = document.getElementById("num").value;
  const allergies = document.getElementById("alg");   
  
+
+let rec = {
+
+}
+
  function getTimeInMinutes() {
     return Number(minutes.value) + Number(hours.value) * 60;
 }
@@ -33,41 +38,61 @@
         container.innerHTML = html;
     }   
 
+    function addListItem(item) {
+        // Step 1: Select the list element
+        const list = document.getElementById('ing');
+  
+        // Step 2: Create a new list item
+        const newItem = document.createElement('li');
+  
+        // Step 3: Set the content of the list item
+        newItem.textContent =  item;
+  
+        // Step 4: Append the new list item to the list
+        list.appendChild(newItem);
+      }
+    
+
 const time = getTimeInMinutes();
 // Function to make inference request to OpenRouter API
 const MODEL_NAME = "mistralai/mistral-small-3.1-24b-instruct:free";
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";   
-const PROMPT = "You are a helpful diet asssitant. You will generate a zone diet recipe with the zone block ratio on the following requirements: the amounth of portions: " + portions + ", the requirements given by the user: " + request + ", the maximum time to make is " + time + "and avoid the ingredients specified " + allergies + ". Return your answer in json format with fields: name, ingredients and process. Make sure you only return the json" 
+
 
 const specifiedElement = document.getElementById('btn')
 
 // I'm using "click" but it works with any event
-document.addEventListener('click', async event => {
+document.getElementById("btn").addEventListener('click', async event => {
   console.log("button clicked");
   const recipe = await generate_inference();
-  document.getElementById("AI").textContent = recipe;
+  const recipeOBJ = JSON.parse(recipe);
+  document.getElementById("recipeTitle").textContent = recipeOBJ.name;
+  recipeOBJ.ingredients.forEach((ingr) => addListItem(ingr));
+  document.getElementById("proc").textContent = recipeOBJ.process;
+
 })
 
 // Function to make inference request to OpenRouter API
 async function generate_inference() {
-try {
-    const response = await fetch(API_URL, {
-        method: "POST",
-        headers: { 
-            "Authorization": `Bearer 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`,
-            "HTTP-Referer": "http://localhost:3000",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            model: MODEL_NAME,
-            messages: [
-                {
-                    "role": "user",
-                    "content": PROMPT
-                }
-            ]
-        })
-    });
+    try {
+        const PROMPT = "You are a helpful diet asssitant. You will generate a zone diet recipe with the zone block ratio on the following requirements: the amounth of portions: " + portions + ", the requirements given by the user: " + request + ", the maximum time to make is " + time + "and avoid the ingredients specified " + allergies + ". Return your answer in json format with fields: name, ingredients and process. Return the list of ingredient as an array of strings where every ingredient is a list item. Make sure you only return the json" 
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { 
+                "Authorization": `Bearer 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`,
+                "HTTP-Referer": "http://localhost:3000",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                model: MODEL_NAME,
+                messages: [
+                    {
+                        "role": "user",
+                        "content": PROMPT
+                    }
+                ]
+            })
+        });
 
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -81,34 +106,22 @@ try {
     // document.getElementById("suggested-time").textContent = recipe.substring(recipe.indexOf("{"), recipe.lastIndexOf("}") + 1);
     const res =  data.choices[0].message.content;
    // generateHTML(JSON.parse(res));
-    return res.substring(res.indexOf("{"), res.lastIndexOf("}") + 1);
+    rec = res.substring(res.indexOf("{"), res.lastIndexOf("}") + 1);
+    return rec;
 } catch (error) {
     console.error("Error during inference:", error.message);
     throw error;
 }
 }
 
-function displayRecipe(json) {
-    let html = `
-        <h1 style="color: #2c3e50; text-align: center;">${json.name}</h1>
-        <hr style="border: 1px solid #ccc; margin-bottom: 10px;">
-    `;
-
-    if (json.ingredients) {
-        html += `<h2 style="color: #27ae60;">Ingredients</h2><ul style="padding-left: 20px;">`;
-        json.ingredients.forEach(item => {
-            html += `<li style="font-size: 18px; margin-bottom: 5px;">${item}</li>`;
-        });
-        html += `</ul>`;
+function like(){
+    const old = JSON.parse(localStorage.getItem("liked"))
+   console.log("old", old);
+    if (old){
+        old.push(rec)
+        localStorage.setItem("liked", JSON.stringify( old));
     }
-
-    if (json.process) {
-        html += `<h2 style="color: #e67e22;">Preparation Steps</h2><ol style="padding-left: 20px;">`;
-        json.process.forEach((step, index) => {
-            html += `<li style="font-size: 18px; margin-bottom: 5px;"><strong>Step ${index + 1}:</strong> ${step}</li>`;
-        });
-        html += `</ol>`;
+    else{
+        localStorage.setItem("liked", JSON.stringify([rec]))
     }
-
-    outputContainer.innerHTML = html;
 }
