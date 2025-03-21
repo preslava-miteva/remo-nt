@@ -31,36 +31,46 @@
         width: 200px;
         font-family:monospace;
         margin-bottom: 0px;
-        margin-top: 0px;">Portions</label>
-        <input type="number" id="quantity" min="1" style="height: 40px; width:290px; "><br>
-        <div class="middle-sections"> <p style="font-size:20px ;
+        margin-top: 0px;" >Portions</label>
+        <input type="number" id="num" min="1" style="height: 40px; width:290px; "><br>
+        <div class="middle-sections"> 
+            <p style="font-size:20px ;
             font-weight: bold;
             font-family:monospace;
-            margin-bottom: 20px;
-            margin-top: 40px;" >Allergies</p>
-        <input type="text" class="search-bars"></div><br>
-        <div class="middle-sections"> <p style="font-size:20px ;
+            padding-bottom: 20px;
+            margin-top: 40px;" >Allergies
+            </p>
+            <input type="text" class="search-bars" value = "none" id="alg"/>
+        </div>
+        <br>
+        <div class="middle-sections"> 
+            <p style="font-size:20px ;
             font-weight: bold;
             font-family:monospace;
             margin-bottom: 30px;
-            margin-top: 60px;" >Requirements</p>
-       <input type="text" class="search-bars"></div>
-       <div> <label for="payment" style="font-size:20px ;
-        font-weight: bold;
-        font-family:monospace;
-        padding-top: -30px;">Time</label><br>
+            margin-top: 60px;" >Requirements
+            </p>
+            <input type="text" class="search-bars" id="req">
+        </div>
+       <div> 
+        <label for="payment" style="font-size:20px ;
+            font-weight: bold;
+            font-family:monospace;
+            padding-top: -30px;">Cooking Time
+        </label>
+        <br>
         <div style="height: 40px;">
             <p style="display: inline-block; margin-right: 110px; ">Hours</p>
             <p style="display: inline-block;">Min</p>
         </div>
         <div>
-            <input type="number" id="hours" min="0" max="12"style="height: 35px; width: 120px; margin-right: 20px;">
-            <input type="number" id="minutes" min="0" max="59" style="height: 35px; width: 120px;">
+            <input type="number" id="hours" min="0" max="24" value="0" style=" height: 35px; width: 120px; margin-right: 20px;">
+            <input type="number" id="minutes" min="0" max="59" value="30" style="height: 35px; width: 120px;">
         </div>
 
        </div>
 
-<button class="BUTTON">=></button>
+<button class="BUTTON" id="btn">=></button>
     </div>
     <div style="width: 96%;
     height: 480px;
@@ -101,4 +111,5 @@ margin-left: 800px;">
           <i class="fa-brands fa-discord fa-2xl"></i></div>
         </div>
 </body>
+<script src="promp1.js"></script>
 </html>
