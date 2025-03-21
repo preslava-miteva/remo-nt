@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+* {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
 
 .up{
     width: 101%;
@@ -15,58 +20,26 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     min-width: 270px;
   }
-.upper{
-    font-weight: bold;
-    color: #2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-    width: 100px;
-    background-color: #f2e0be;
-   text-decoration: none;
-   border-radius: 3px;
-   padding-top: 10px;
-   padding-left: 20px;
-   margin-left: 10px;
-  }
-  .uppe{
-    font-weight: bold;
-    color: #2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-    width: 100px;
-    background-color: #f2e0be;
-   text-decoration: none;
-   border-radius: 3px;
-   padding-top: 10px;
-   padding-left: 25px;
-   margin-left: 10px;
-  }
-.upperr{
-    font-weight: bold;
-    color: #2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-   text-decoration: none;
-   border: none;
-  width: 120px;
-  padding-top: 10px;
-  padding-left: 20px;
-   background-color: #f2e0be;
-   border-radius: 3px;
-  }
-  .upperrr{
-    font-weight: bold;
-    color:#2e2f2f;
-    margin-top: 25px;
-    font-size: 25px;
-   text-decoration: none;
-   border: none;
+.upper_buttons{
+  text-align: center;
+  font-weight: bold;
+  color:#2e2f2f;
+  margin-top: 25px;
+  font-size: 25px;
+  text-decoration: none;
+  border: none;
   width: 140px;
-  padding-top: 10px;
-  padding-left: 20px;
-   background-color: #f2e0be;
-   border-radius: 3px;
-  }
+  padding: 10px;
+  background-color: #f2e0be;
+  border-radius: 3px;
+  transition: background-color 0.15s;
+}
+.upper_buttons:hover{
+  background-color: #f0e9dc;
+}
+.upper_buttons:active{
+  background-color: #f3e6cd;
+}
 .img-up{
   min-width: 270px;
 }  
@@ -80,6 +53,7 @@
     border-radius: 2px;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
     min-width: 50px;
+    outline:none;
   }
   
 .search-bar::placeholder {
@@ -164,7 +138,7 @@
     min-width: 480px;
     height: 420px;
     align-items: center;
-    font-family: fantasy;
+    font-family: Delius Swash Caps;
     border-radius: 20px;
     margin-right: 20px;
     border-color: #d7b89a;
@@ -320,4 +294,72 @@ display:inline;
   line-height: 1.6;
   margin-top: 10px;
   text-align: justify;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #3cbbb1;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.favorites-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.recipe-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.remove-btn {
+  background-color: #3cbbb1;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  width: 100%;
+}
+
+.remove-btn:hover {
+  background-color: #1c867d;
 }
