@@ -123,11 +123,10 @@ function like(){
     // else{
         // localStorage.setItem("liked", JSON.stringify([rec]))
     // }
+    function loadLiked() {
+        const n = localStorage.getItem("counter");
+        for (let i = 1; i <= n; i++) {
+            let loadRecipe = localStorage.getItem("liked." + i);
+        }
 }
-
-function loadLiked() {
-    const n = localStorage.getItem("counter");
-    for (let i = 1; i <= n; i++) {
-        let loadRecipe = localStorage.getItem("liked." + i);
-    }
 }
