@@ -29,7 +29,7 @@
   border: none;
   width: 140px;
   height: 55px;
-  padding: 10px;
+  padding-top: 10px;
   background-color: #f2e0be;
   border-radius: 3px;
   transition: background-color 0.15s;
@@ -38,27 +38,6 @@
   background-color: #f0e9dc;
 }
 .upper_buttons:active{
-  background-color: #f3e6cd;
-}
-.upper_buttonss{
-  text-align: center;
-  font-weight: bold;
-  color:#2e2f2f;
-  margin-top: 25px;
-  font-size: 25px;
-  text-decoration: none;
-  border: none;
-  width: 140px;
-  height: 55px;
-  padding-top: 10px;
-  background-color: #f2e0be;
-  border-radius: 3px;
-  transition: background-color 0.15s;
-}
-.upper_buttonss:hover{
-  background-color: #f0e9dc;
-}
-.upper_buttonss:active{
   background-color: #f3e6cd;
 }
 .img-up{
