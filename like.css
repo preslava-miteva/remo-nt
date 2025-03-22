@@ -15,6 +15,7 @@ body {
     border: 2px solid #ddd; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-size: large;
 }
 
 #textContainer {
@@ -49,4 +50,10 @@ body {
     color: #fff;
     margin: 0 10px;
     cursor: pointer;
+}
+
+#container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
 }
