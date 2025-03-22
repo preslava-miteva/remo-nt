@@ -6,7 +6,7 @@ body {
 }
 
 
-.container {
+#container {
     width: 80%; 
     max-width: 1500px; 
     margin: 20px auto; 
@@ -18,7 +18,7 @@ body {
     font-size: large;
 }
 
-#textContainer {
+.textContainer {
     font-size: 60px; 
     line-height: 1.6; 
     color: #333; 
@@ -26,7 +26,9 @@ body {
     margin: 0;
 }
 
-
+.pContainer {
+    margin-left: 20px;
+}
 
 .bottomm {
     background-color: #333;
@@ -36,24 +38,3 @@ body {
     margin-top: 50px;
 }
 
-.bottomm p {
-    margin: 5px 0;
-}
-
-.bottomm a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.bottomm i {
-    color: #fff;
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-#container p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-}
