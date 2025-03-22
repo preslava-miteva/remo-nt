@@ -65,15 +65,24 @@ padding-bottom: 0px ;
     font-weight: bold; 
 }
 .whaT{
-    text-align: center;
-    font-weight: bold;
-    padding-top: 20px;
+    font-family: 'Delius Swash Caps';
     background-color: rgba(158, 157, 157, 0.9);
     font-size: 40px; 
     padding-left: 20px;
     height: 100%; 
     }
-
+    .bottomm{
+    margin-top: 300px;
+    margin-left: -20px;
+    width: 102%;
+    height: 350px;
+    background-color: #2e2f2f ;
+    color: white;
+    font-weight: bold;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 0px;
+}
 .upper_buttons{
     text-align: center;
     font-weight: bold;
@@ -83,7 +92,7 @@ padding-bottom: 0px ;
     text-decoration: none;
     border: none;
     width: 140px;
-    padding: 10px;
+    padding: 20px;
     background-color: #f2e0be;
     border-radius: 3px;
     transition: background-color 0.15s;
@@ -94,16 +103,3 @@ padding-bottom: 0px ;
   .upper_buttons:active{
     background-color: #f3e6cd;
   }
-  .bottomm{
-    margin-top: 300px;
-    margin-left: -20px;
-    width: 102%;
-    height: 350px;
-    background-color: #2e2f2f;
-    color: white;
-    font-weight: bold;
-    display: grid;
-    justify-items: center;
-    margin-bottom: 0px;
-}
-
